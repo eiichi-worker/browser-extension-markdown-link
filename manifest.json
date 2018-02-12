@@ -4,23 +4,25 @@
     "description": "表示中のタブのLinkをMarkdown形式でコピーします",
     "version": "0.1",
     "icons": {
-      "512": "icon/icon-512.png"
+        "128": "icon/icon-128.png",
+        "512": "icon/icon-512.png"
     },
     "background": {
-      "scripts": [
-        "js/background.js"
-      ],
-      "persistent": false
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
     },
     "browser_action": {
-      "default_icon": {
-        "512": "icon/icon-512.png"
-      },
-      "default_title": "Copy Markdown Link",
-      "default_popup": "popup.html"
+        "default_icon": {
+            "128": "icon/icon-128.png",
+            "512": "icon/icon-512.png"
+        },
+        "default_title": "Copy Markdown Link",
+        "default_popup": "popup.html"
     },
     "permissions": [
-      "tabs",
-      "clipboardWrite"
+        "tabs",
+        "clipboardWrite"
     ]
-  }
+}
