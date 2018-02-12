@@ -7,7 +7,7 @@ Chrome拡張機能「Copy Markdown Link」
 
 インストール
 ---
-1. こちらからインストール → [Copy Markdown Link](https://chrome.google.com/webstore/developer/dashboard/g10532610733867516302?hl=ja&gl=JP)
+1. こちらからインストール → [Copy Markdown Link](https://chrome.google.com/webstore/detail/copy-markdown-link/aagldhajnlablfkankpookoabndalnbi?hl=ja&gl=JP)
 
 
 使い方
