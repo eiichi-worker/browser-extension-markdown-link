@@ -5,11 +5,15 @@ Chrome拡張機能「Copy Markdown Link」
 ---
 - 開いているページのMarkdown用Linkをクリップボードにコピー
 
+インストール
+---
+1. こちらからインストール → [Copy Markdown Link](https://chrome.google.com/webstore/developer/dashboard/g10532610733867516302?hl=ja&gl=JP)
+
 
 使い方
 ---
-0. 追加された「Copy Markdown Link」Buttonをclick!!
-0. Linkを使いたいところへPaste!!
+1. 追加された「Copy Markdown Link」Buttonをclick!!
+1. Linkを使いたいところへPaste!!
 
 
 Thanks
