@@ -22,3 +22,4 @@ Thanks
 - [表示中のページのタイトルとURLをキーボードショートカットでクリップボードに保存するChrome拡張を作ってみた](https://qiita.com/satake_masaki/items/def09ca51731efa2826f)
 - [Chromeのオリジナル拡張機能を開発しよう（ソースコードあり）](https://liginc.co.jp/web/tool/browser/163575)
 - [アイコン素材ダウンロードサイト「icooon-mono」](http://icooon-mono.com/)
+- [Chromeエクステンションを作ろう：国際化編 - Qiita](https://qiita.com/dhun/items/59707eeb2dc38d3a7a99)

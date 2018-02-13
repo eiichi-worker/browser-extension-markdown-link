@@ -14,8 +14,14 @@
     document.getElementById('clipboard-text').innerText = text_area.value
     console.log(text_area.value)
   }
-  
+
   chrome.tabs.getSelected(null, function (tab) {
     copyLink(tab)
+  })
+
+  console.log(chrome.i18n.getUILanguage())
+  console.log(chrome.i18n.getMessage('popup_copy_message', []))
+  Array.prototype.forEach.call(document.getElementsByClassName('i18n_popup_copy_message'), function (element) {
+    element.innerText = chrome.i18n.getMessage('popup_copy_message', [])
   })
 }).call(this)
