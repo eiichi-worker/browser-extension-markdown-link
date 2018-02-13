@@ -16,6 +16,10 @@ Chrome拡張機能「Copy Markdown Link」
 1. 追加された「Copy Markdown Link」Buttonをclick!!
 1. Linkを使いたいところへPaste!!
 
+不具合・要望
+---
+不具合や要望などありましたらこちら↓にお願いします。
+- [Issues · eiichi-worker/browser-extension-markdown-link](https://github.com/eiichi-worker/browser-extension-markdown-link/issues)
 
 Thanks
 ---
