@@ -2,7 +2,8 @@
     "manifest_version": 2,
     "name": "Copy Markdown Link",
     "description": "表示中のタブのLinkをMarkdown形式でコピーします",
-    "version": "0.1",
+    "version": "0.2",
+    "default_locale": "en",
     "icons": {
         "128": "icon/icon-128.png",
         "512": "icon/icon-512.png"
