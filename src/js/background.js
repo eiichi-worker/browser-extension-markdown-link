@@ -32,6 +32,9 @@
 
   // コンテキストメニューのイベント追加
   chrome.contextMenus.onClicked.addListener(function (info, tab) {
+    // モジュールを読み込み
+    let tabFunctions = new TabFunctions()
+
     // [メニュー] 現在のタブのリンクをコピーする
     if (info.menuItemId == "beml_m_1001") {
       chrome.tabs.getAllInWindow(null, function (tabs) {

@@ -1,5 +1,8 @@
 ;
 (function () {
+  // モジュールを読み込み
+  let tabFunctions = new TabFunctions()
+
   chrome.tabs.getSelected(null, function (tab) {
     let linkText = tabFunctions.getLinkText(tab, null)
     tabFunctions.writeClipboard(linkText)
