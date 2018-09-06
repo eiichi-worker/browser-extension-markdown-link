@@ -10,7 +10,7 @@
     },
     "background": {
         "scripts": [
-            "js/common.js",
+            "my_modules/TabFunctions.js",
             "js/background.js"
         ],
         "persistent": false
