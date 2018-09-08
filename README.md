@@ -1,6 +1,6 @@
 Chrome拡張機能「Copy Markdown Link」
 ===
-[![Build Status](https://travis-ci.org/eiichi-worker/browser-extension-markdown-link.svg?branch=master)](https://travis-ci.org/eiichi-worker/browser-extension-markdown-link)
+[![Build Status](https://travis-ci.org/eiichi-worker/browser-extension-markdown-link.svg?branch=master)](https://travis-ci.org/eiichi-worker/browser-extension-markdown-link) [![Join the chat at https://gitter.im/browser-extension-markdown-link/Lobby](https://badges.gitter.im/browser-extension-markdown-link/Lobby.svg)](https://gitter.im/browser-extension-markdown-link/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 機能
 ---
