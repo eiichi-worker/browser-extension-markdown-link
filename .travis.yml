@@ -5,3 +5,32 @@ dist: trusty
 sudo: false
 cache: yarn
 script: yarn run jest --coverage
+
+env:
+  global:
+    - GIT_TAG=`node -pe "require('./package.json').version"`
+    - GIT_USER="Eiichi Fujimoto"
+    - GIT_EMAIL="work.eiichi.co.jp@gmail.com"
+    - GIT_REPO="eiichi-worker/browser-extension-markdown-link"
+    - secure: "khCDqxZGCpQsWpkOMUSW9crDvgw5sznksXnmDAl9MOq0QkhOvEIhp2q9qdgPqYP6mCtZJC4NYeDiY5APnhsy5Kev7KaHmGwjuDkH0MkXx8prZrGFNGkkp/wOKz25F0p5YV9WR1lJG90m9n5ey2DVWTd+tg41C2WDyRL8b+0SbPgjOpWPI22V9U2jKzH1U+0UyoZ5OUbcdDezpkdnbEuSCtedzjiNkHc4xEFPaC4ZubLUqFCKXBmCohLT5V1KnY9JWJ0gvcqhmxh3kVR7xraSdRA8fa6wQV47+jvkLRVkXjScFEDOS8i5RysnckIbWn7OKErhm3kJZ4e3VsfuYFtq2z27MQh18SYyBO6k0EJZV3++Tg6I9dza+Tww+A18jit8RXVV17KDnbZE6X3vHSyllrvggOqLrrMc1hrkDC1Pik+uS8UjJGMgzwdVoGI9Xg+IxFGHBw1rcLc0rbKGVBNZUm5S2yCoSmzx0OKRllW0wjUZ/0ioVNNCPQC4OUhKr1ZqD74YmFu9VWPqYLiaIsdAAxhCZanJB64z+8Scxe7S8AIO7lL6j0Vsplc0MSoZaFh5ghRJiOlpMgxAUHE1kyhlMZiZ1EZP5XdPg+RhmhGoS3ESAKoMLuESIflht7tkUXFTbiD7nr999I/qUxOaCXujFlba80zXYzUDG3CRNUkqAPM="
+
+before_deploy:
+  # 配布データの生成
+  - gulp packaging
+  # Gitの設定
+  - git config --global user.name "Travis CI"
+  - git config --global user.email "travis@travis-ci.org"
+  - git tag ${GIT_TAG} -a -m "Commit from Travis CI for build ${TRAVIS_BUILD_NUMBER}"
+  - git push --quiet https://${GH_TOKEN}@github.com/${GIT_REPO}.git --tags 2> /dev/null
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "MX/ia5pwwMUdXbxx8ce/PsRhBiRDYcp2hlHRc/7pxnhTAjgZMTkM3hYuHe8QMBlTgc13NwYfrfCr/1cPyp4wo2c62IOr0qood++Moo07grW4lM6ufVMi+1001UsMt7rEsY20FKhqhNCBjjl5uXufFrjDop88/2T0yoR6BUXKFzKlO7utx6Z3iRdDZJtvxSiMIW/69tqpgvgjkHBCQbC3EqhBzSZQoDKIVIdJy6fmELtsEUtTpGpfD7Z/dhLUuvIDyzltb1ePRG0yaMukkZ2sWwNx3YibCkEx5m9kBjfkcsuompKmuxh23LUQX9NgKyOzB6T8tS3eoQXjCd4ARI3qWCpA2qhTyQV/wRJ/j0L3Cu/A9fP+SFiNPeVWsKAWTrytynom+juNUDojuLITgJI8hBMkn0nxjr9K8DnHO7sk0L7SIidjaxaVmAZpmgaP1Z8VfgFY6QRlijbQtZ8YLcBzCEogGY16YmiNl/zR5gQ7vt9uwp5DJ6/P26RyaceEv9jjf9eWx8vAda131KT5KDR5n8IMStmKqP/Z4jvAa9JOvE2cpTIWnVnN5jAI6GiB7nlj3fufaD8a8paJqKvEIXvv3awcO5T8/NVbZMtVnJvWNyZYwtQipI6GgseBJ6Ypyu0T6AjEV9QGItbR88Iw+yzT/ENSQMzv5yv8gi+P77nRoyo="
+  file: 
+    - "dist/${GIT_TAG}.zip"
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: ${GIT_REPO}
+    tags: true
