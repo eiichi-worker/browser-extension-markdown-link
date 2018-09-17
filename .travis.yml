@@ -5,7 +5,7 @@ dist: trusty
 sudo: false
 cache: yarn
 script:
-  - echo $GIT_TAG
+  - echo ${GIT_TAG}
   - yarn run jest --coverage
 
 env:

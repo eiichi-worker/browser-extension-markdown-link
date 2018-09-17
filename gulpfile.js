@@ -28,7 +28,8 @@ gulp.task('zip', () => {
  */
 gulp.task('copy_dist', () => {
   return gulp.src('./src/**/*')
-    .pipe(gulp.dest(`./dist/${pkg.version}`));
+    .pipe(gulp.dest(`./dist/${pkg.version}`))
+    .pipe(gulp.dest(`./dist/latest`))
 });
 
 /**
@@ -37,11 +38,14 @@ gulp.task('copy_dist', () => {
 gulp.task('manifest_version_replace', () => {
   return gulp.src('./src/manifest.json')
     .pipe(replace('{{VERSION}}', pkg.version))
-    .pipe(gulp.dest(`./dist/${pkg.version}`));
+    .pipe(gulp.dest(`./dist/${pkg.version}`))
+    .pipe(gulp.dest(`./dist/latest`));
+
 });
 
 gulp.task('clean', (callback) => {
   const distDir = `./dist/${pkg.version}`
+  const distDirLatest = `./dist/latest`
   const zipPath = `./dist/${pkg.version}.zip`
-  return del([distDir, zipPath], callback)
+  return del([distDir, distDirLatest, zipPath], callback)
 });
