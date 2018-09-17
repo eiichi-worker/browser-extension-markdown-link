@@ -4,7 +4,9 @@ node_js:
 dist: trusty
 sudo: false
 cache: yarn
-script: yarn run jest --coverage
+script:
+  - echo $GIT_TAG
+  - yarn run jest --coverage
 
 env:
   global:
