@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Copy Markdown Link",
     "description": "表示中のタブのLinkをMarkdown形式でコピーします",
-    "version": "0.2",
+    "version": "{{VERSION}}",
     "default_locale": "en",
     "icons": {
         "128": "icon/icon-128.png",
@@ -10,6 +10,7 @@
     },
     "background": {
         "scripts": [
+            "my_modules/TabFunctions.js",
             "js/background.js"
         ],
         "persistent": false
@@ -24,6 +25,7 @@
     },
     "permissions": [
         "tabs",
-        "clipboardWrite"
+        "clipboardWrite",
+        "contextMenus"
     ]
 }

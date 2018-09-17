@@ -1,5 +1,11 @@
 {
     "popup_copy_message": {
         "message": "copied to clipboard!!"
+    },
+    "context_menus_beml_m_1001_name": {
+        "message": "Copy the link of the current tab"
+    },
+    "context_menus_beml_m_1002_name": {
+        "message": "Copy the link of the all tabs"
     }
 }
