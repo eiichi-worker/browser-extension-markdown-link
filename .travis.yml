@@ -35,4 +35,4 @@ deploy:
   on:
     branch: master
     repo: ${GIT_REPO}
-    tags: true
+    tags: false
