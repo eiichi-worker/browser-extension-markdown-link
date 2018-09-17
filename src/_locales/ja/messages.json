@@ -1,5 +1,11 @@
 {
     "popup_copy_message": {
         "message": "コピーしたよ!!"
+    },
+    "context_menus_beml_m_1001_name": {
+        "message": "現在のタブのリンクをコピーする"
+    },
+    "context_menus_beml_m_1002_name": {
+        "message": "すべてのタブのリンクをコピーする"
     }
 }
