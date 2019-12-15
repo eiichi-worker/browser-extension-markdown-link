@@ -3,7 +3,7 @@ var TabFunctions = require('../src/my_modules/TabFunctions.js')
 var tabFunctions = new TabFunctions()
 
 describe('TabFunctions', () => {
-    describe('getLinkText()', () => { // sum()メソッドで
+    describe('getLinkText()', () => {
         let tab = {
             title: 'example',
             url: 'http://example.com'
