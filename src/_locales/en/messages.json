@@ -7,5 +7,11 @@
     },
     "context_menus_beml_m_1002_name": {
         "message": "Copy the link of the all tabs"
+    },
+    "context_menus_beml_m_2001_name": {
+        "message": "Copy the link of the current tab(plane)"
+    },
+    "context_menus_beml_m_3001_name": {
+        "message": "Copy the link of the current tab(html)"
     }
 }
