@@ -1,21 +1,18 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Copy Markdown Link",
     "description": "表示中のタブのLinkをMarkdown形式でコピーします",
-    "version": "{{VERSION}}",
+    "version": "1.0.0",
     "default_locale": "en",
     "icons": {
         "128": "icon/icon-128.png",
         "512": "icon/icon-512.png"
     },
     "background": {
-        "scripts": [
-            "my_modules/TabFunctions.js",
-            "js/background.js"
-        ],
-        "persistent": false
+        "service_worker": "js/background.js",
+        "type": "module"
     },
-    "browser_action": {
+    "action": {
         "default_icon": {
             "128": "icon/icon-128.png",
             "512": "icon/icon-512.png"
@@ -26,6 +23,7 @@
     "permissions": [
         "tabs",
         "clipboardWrite",
-        "contextMenus"
+        "contextMenus",
+        "offscreen"
     ]
 }
