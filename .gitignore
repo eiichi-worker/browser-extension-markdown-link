@@ -3,3 +3,6 @@
 node_modules
 dist/*
 !.gitkeep
+
+# IDE
+.agent/rules/*.local.*

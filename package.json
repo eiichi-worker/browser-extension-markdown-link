@@ -1,6 +1,6 @@
 {
   "name": "browser-extension-markdown-link",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Chrome拡張機能「Copy Markdown Link」",
   "repository": "https://github.com/eiichi-worker/browser-extension-markdown-link",
   "author": "eiichi-worker <8284623+eiichi-worker@users.noreply.github.com>",
